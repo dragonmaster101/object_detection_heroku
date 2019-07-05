@@ -7,12 +7,8 @@ from PIL import Image
 from flask import send_file
 import cv2 as cv
 import numpy
-from gtts import gTTS 
-from pydub import AudioSegment
-from pygame import mixer
-import random
-import string
-import pyttsx3 
+
+
 
 classNames = {0: 'background',
               1: 'person', 2: 'bicycle', 3: 'car', 4: 'motorcycle', 5: 'airplane', 6: 'bus',
