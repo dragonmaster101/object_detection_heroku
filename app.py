@@ -9,6 +9,8 @@ import cv2 as cv
 import numpy
 
 global cvNet
+cvNet = cv.dnn.readNetFromTensorflow('./model/frozen_inference_graph.pb',
+                                             './model/ssd_mobilenet_v1_coco_2017_11_17.pbtxt')
 
 classNames = {0: 'background',
               1: 'person', 2: 'bicycle', 3: 'car', 4: 'motorcycle', 5: 'airplane', 6: 'bus',
@@ -111,6 +113,5 @@ def upload():
 
 if __name__ == "__main__":
    
-    cvNet = cv.dnn.readNetFromTensorflow('./model/frozen_inference_graph.pb',
-                                             './model/ssd_mobilenet_v1_coco_2017_11_17.pbtxt')
+    
     app.run()
